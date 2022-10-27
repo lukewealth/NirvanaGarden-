@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Products</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<!-- cart section-->
+
+
+<button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+</svg> Your Cart</button>
+
+
+<body>
+    <!--Product options
+You can add up to ten product options with or without separate prices. You can display options in a drop-down menu or text boxes.
+
+Product options without prices
+Product options with prices
+Text box product options
+Product options without prices
+This sample shows a basic Add to Cart button with a drop-down menu of product options without prices.-->
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <!-- Identify your business so that you can collect the payments. -->
+    <input type="hidden" name="business" value="kin@kinskards.com">
+  
+    <!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="add" value="1">
+  
+    <!-- Specify details about the item that buyers will purchase. -->
+    <input type="hidden" name="item_name"
+          value="Birthday - Cake and Candle">
+    <input type="hidden" name="amount" value="3.95">
+    <input type="hidden" name="currency_code" value="USD">
+  
+    <!-- Provide a drop-down menu option field, without prices. -->
+    <input type="hidden" name="on0" value="Color">
+    <label for="os0">Color scheme</label>
+      <select name="os0" id="os0">
+        <option value="Select a color scheme">-- Select a color scheme --</option>
+        <option value="Blue">Blue</option>
+        <option value="Pink">Pink</option>
+        <option value="Yellow">Yellow</option>
+    </select>
+  
+    <!-- Display the payment button. -->
+    <input type="image" name="submit"
+      src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+      alt="Add to Cart">
+    <img alt="" width="1" height="1"
+      src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+  </form>
+
+</body>
+</html>>
